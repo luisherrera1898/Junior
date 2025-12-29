@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Junior course</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <a href="exercises.html">ejercicios</a>
+    
+        </header>
+    
+        <main>
+            <h1>Bienvenido al curso junior de soyDalto</h1>
+            
+            <section class="variables">
+                <h2 class="h2--show-button">
+                    Las variables
+                    <button id="ToggleShow">Mostrar/Ocultar</button>
+                </h2>
+                <div id="variablesContent" class="hidden">
+                    <p>
+                        Las variables son espacios en memoria que permiten almacenar datos, debemos pensar en las variables como cajas donde podemos guardar cosas, en general una variable puede almacenar solo un dato
+                    </p>
+                    <h3>Tipos de datos</h3>
+                    <p>
+                        Como se menciono anteriormente las variables contienen datos, y existe varios tipos de datos, es importante entender que entre los datos que existen, tendremos 2 importantes categorias que resumiré a continuación:
+                        <ul>
+                            <li>Datos primitivos, no mutables</li>
+                            <p>
+                                Los datos primitivos incluyen datos que son basicos para el mundo de la computación, la caracteristica principal de los datos primitivos es que no pueden cambiar su tipo, es decir, cuando un dato es del tipo A, no puede cambiar a un tipo B. Un ejemplo de esto es que un numero entero por ejemplo, no puede convertirse en un numero real ya que el tipo entero no acepta decimales, mientras que el numero real si los acepta. En conclusion los datos primitivos no son mutables, una vez aclarado estos datos son comprendidos por:
+                            </p>
+                            <ol>
+                                <li>enteros, INT, Integers</li>
+                                <p>
+                                    los numeros enteros por supuesto, un dato primitivo que nos acompaña desde las matemáticas mas basicas. La caracteristica principal de este dato es que suelen ser numeros enteros con lo cual no aceptan decimales.
+                                </p>
+                                <li>float</li>
+                                <p>
+                                    Los numeros flotantes o también llamados matemáticamente como números reales, son aquellos números que pueden aceptar decimales. Basicamente como los enteros, pero con decimales.
+                                </p>
+                                <li>string, cadenas de texto</li>
+                                <p>
+                                    Las cadenas de texto son un tipo de dato importante para poder transmitir informacion mediante interfaces graficas que los humanos podamos entender, las maquinas podrian comunicarse mediante señales electricas sin necesidad de palabrerias. Pero para nosotros es importante mantener cadenas de texto. De hecho todo lo que has leido hasta ahora son cadenas de texto interpretadas por el motor web que usa tu navegador.
+                                </p>
+                                <li>booleanos, bool</li>
+                                <p>
+                                    Antes mencione que las computadora podrian comunicarse mediante señales electricas, la electricidad funciona con una dualidad, cuando hay electricidad y cuando no hay electricidad. Esto se represento mediante el sistema binario de 0 (no hay electricidad) y el 1 (hay electricidad). Un tipo de dato muy curioso y que se asemeja a toda esta apertura que pareciera no tener nada que ver con lo que estabamos abordando hasta ahora, es por supuesto el tipo de dato booleano, los booleanos son informacion que guardan cuando un dato es falso o verdadero. En resumen los booleanos solo pueden contener un valor true (1) o un valor false (0).
+                                </p>
+                                <li>undefined</li>
+                                <p>
+                                    undefined es un tipo de valor que aparace para inidicarnos que una variable, ha sido declarada pero que no tiene guardado ningun dato, por lo tanto esta sin definir.
+                                </p>
+                                <li>Null</li>
+                                <p>
+                                    Null es un valor que implica algo vacío, es decir, es una variable que intencionalmente hemos inicializado con el valor Null para que este creada pero vacía.
+                                </p>
+                                <li>NaN</li>
+                                <p>
+                                    Este valor surge cuando intentamos realizar una operacion entre 2 variables, dicha operacion puede ser una suma, resta, multiplicacion o una división. El valor aparece indicando que NO ES UN NUMERO NaN (NOT a NUMBER). Esto ocurre si por ejemplo, A = 10, B = "hola mundo". Entonces A + B = NaN, ya que 10 + holamnudo no es una operacion posible.
+                                </p>
+                            </ol>
+                            <li>Datos no primitivos, mutables</li>
+                            <p>
+                                por ahora no profundizare mucho en los mutables ya que lo veremos mas adelante. Pero para resumir un poco, los datos que son NO primitivos, son aquellos datos que se crean a partir de la construccion de varios datos primitivos, por ejemplo un vector (arreglo) o un objeto es la construccion de un dato que contiene varios datos que pueden cambiar sus valores, por lo que es mutable. Ahora es algo confuso pero mas adelante se profundizara esto.
+                            </p>
+                        </ul>
+                    </p>
+
+                    <h3>Declarar, Inicializar, Definir</h3>
+                    <p>
+                        Cuando creamos una variable, el termino crear esta realmente mal planteado, hablemos un poco sobre de qué se trata la creacion de una variable:
+                        <ul>
+                            <li>Declaracion</li>
+                            <p>
+                                Declarar una variable es abir espacio en memoria para el almacenamiento de datos. Es cuando por ejemplo codeamos un: <span class="code-example">let nombreDeVariable;</span>
+                            </p>
+                            <li>Inicializacion</li>
+                            <p>
+                                La inicializacion de una variable sucede cuando declaramos una variable y al mismo tiempo que la declaramos le inicializamos un valor, es decir, guardamos un dato al mismo tiempo que es declarada. Ejemplo: 
+                                <span class="code-example">let nombreDeVariable = "hola mundo";</span>
+                            </p>
+                            <li>Definicion</li>
+                            <p>
+                                Definimos una variable cuando le asignamos/guardamos un valor en la variable declarada pero no en su declaracion. Ejemplo:
+                                <span class="code-example">let nombreDeVariable; declaracion <br> nombreDeVariable = 10; definicion</span>
+                            </p>
+                        </ul>
+                    </p>
+                    
+                    <h3>El Scope</h3>
+                    <p>
+                        El scope se refiere a quienes tienen acceso a la variable en cuestion. Cuando estamos programando los codigos se dividen en bloques los cuales estan marcados con un inicio y un fin "{}". Dentro de dichas llaves que marcan un inicio y un final de un bloque de codigo podemos dictaminar si una variable es accesible desde afuera de dicho bloque de codigo o privada, en otros lenguajes es muy frecuente el uso de public y private, en javascript por otra parte se implemento el let, const y el var. 
+                    </p>
+                </div>
+            </section>
+
+            <section class="concatenacionContent">
+                <h2 class="h2--show-button">
+                    Concatenaciones
+                    <button id="ToggleShow">Mostrar/Ocultar</button>
+                </h2>
+                <div id="concatenacionContent" class="hidden">
+
+                </div>
+            </section>
+        </main>
+    
+        <footer>
+    
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

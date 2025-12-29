@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222222;
+    display: var(--main-display);
+    justify-content: var(--main-justify-content);
+}
+
+.wrapper{
+    display: var(--main-display);
+    justify-content: var(--main-justify-content);
+    width: 1440px;
+    height: 100vh;
+}
+
+.hidden {
+    display: none; /* Oculta el contenido */
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: var(--text-color-dark);
+}
+h1,h2,h3{
+    text-align: center;
+}
+h1{font-size: 50px; margin-bottom: var(--margin-bottom-text);}
+h2{font-size: 40px; margin-bottom: var(--margin-bottom-text);}
+h3{font-size: 30px; margin-bottom: var(--margin-bottom-text);}
+p{font-size: 21px; margin-bottom: var(--margin-bottom-text);}
+
+ul,ol{
+    color: var(--text-color-dark);
+    font-weight: bold;
+    font-size: 21px;
+}
+
+button{
+    font-size: 30px;
+    color: var(--text-color-dark);
+    background-color: var(--main-background-color-dark);
+    cursor: pointer;
+}
+
+.h2--show-button button{
+    border-radius: 5%;
+    padding: .5em;
+    margin-left: 1em;
+}
+.code-example{
+    display: block;
+    margin: 1em;
+    font-weight: lighter;
+    font-style: italic;
+    padding: 5px 30px;
+    background-color: var(--code-example-background-color-dark);
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu select{
+    background-color: #333;
+    color: #f3f3f3;
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu button{
+    background-color: var(--main-background-color-dark);
+    color: var(--text-color-dark);
+    font-size: 1em;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+:root {
+    --main-display: flex;
+    --main-justify-content: center;
+    --margin-bottom-text: 1em;
+    --text-color-dark: #c3c3c3;
+    --main-background-color-dark: #222222;
+    --code-example-background-color-dark: #323232;
+}
