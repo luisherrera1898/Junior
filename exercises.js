@@ -2,7 +2,7 @@ import { coflaIceCream, coflaSpareMoney, coflaGuilty } from './exercises/firstPa
 import { partySmith, coflaCollege, coflaCalculator } from './exercises/secondPart.js';
 import { coflaInAndroidStore, coflaGettingNewGames } from './exercises/thirdPart.js';
 
-const thirdPart = require('./exercises/thirdPart.js');
+
 window.onload = function() {
     let selected = document.getElementById("selector");
     document.getElementById("selectorBtn").onclick = () => checker(selected);
